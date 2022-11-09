@@ -8,33 +8,42 @@
     <script src="https://kit.fontawesome.com/e416b822ca.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+<!--début du body-->
 <body>
+    <!--début HEADER-->
     <header>
         <h1>ohmyfood</h1> 
     </header>
+   <!--début du MAIN-->
     <main>
+        <!--1ére section city-->
         <section class="city">
 <i class="fa-solid fa-location-dot"></i>
 <span class="city-name">Paris, Belleville</span>
         </section>
+         <!--2éme section explore-restaurant-->
         <section class="explore-restaurant">
             <h2>Réservez le menu qui <br> vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
             <button>Explorer nos restaurants</button>
         </section>
+        <!--3eme section Fonctionnement-->
         <section class="fonctionnement">
             <h2 class="title">Fonctionnement</h2>
             <ol class="steps">
+                <!--1ére étape du fonctionnement-->
 <li class="step">
     <div class="step-number">1</div>
     <i class="fa-solid fa-mobile-screen-button"></i>
     <p>Choisissez un restaurant</p>
 </li>
+ <!--2éme étape du fonctionnement-->
 <li class="step">
     <div class="step-number">2</div>
     <i class="fa-solid fa-list-ul"></i>
     <p>Composez votre menu</p>
 </li>
+ <!--3éme étape du fonctionnement-->
 <li class="step">
     <div class="step-number">3</div>
     <i class="fa-solid fa-store"></i>
@@ -42,43 +51,69 @@
 </li>
             </ol>
         </section>
+        <!--4éme section liste des restaurants-->
         <section id="restaurants">
             <h2>Restaurants</h2>
             <div class="list-of-cards">
+                <!--1er restaurant-->
             <a class="restaurant-card" href="la-palette-du-gout.html">
                 <img src="images/La palette du goût.jpg" alt class="restaurant-image">
                 <span class="new">Nouveau</span>
                 <div class="restaurant-info">
+                    <div class="restaurant-text">
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
                 </div>
-                <div class="like-btn"></div>
+                    <button class="menu-heart"> 
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
             </a>
+            <!--2eme restaurant-->
             <a class="restaurant-card" href="La-note-enchantée.html"> 
                 <img src="images/La note enchantée.jpg" alt class="restaurant-image">
                 <span class="new">Nouveau</span>
                 <div class="restaurant-info">
+                    <div class="restaurant-text">
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
+            </div>
+            <button class="menu-heart"> 
+                <i class="fa-regular fa-heart"></i>
+            </button>
                 </div>
             </a>
+            <!--3éme restaurant-->
             <a class="restaurant-card" href="À-la-française.html"> 
                 <img src="images/À la française.jpg" alt class="restaurant-image">
                 <div class="restaurant-info">
+                    <div class="restaurant-text"> 
                 <h3>À la française</h3>
                 <p>Cité rouge</p>
-            </div>
+                    </div>
+                    <button class="menu-heart"> 
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
             </a>
+            <!--4éme restaurant-->
             <a class="restaurant-card" href="Le-délice-des-sens.html">
                 <img src="images/Le délice des sens.jpg" alt class="restaurant-image">
                 <div class="restaurant-info">
+                    <div class="restaurant-text">
 <h3>Le délice des sens</h3>
 <p>Folie-Méricourt</p>
+                    </div>
+                    <button class="menu-heart"> 
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
                 </div>
             </a>
             </div>
         </section>
+        <!--fin du 4éme section : liste des restaurants-->
     </main>
+    <!--début du footer-->
     <footer class="footer">
         <div class="footer-part">
         <span class="footer-logo">Ohmyfood</span>
@@ -104,5 +139,6 @@
         </ul>
     </div>
     </footer>
+    <!--fin du footer-->
 </body>
 </html>

@@ -4,6 +4,7 @@
 *{   
  box-sizing: border-box;
 }
+/*reset*/
  /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -39,18 +40,8 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
+/*css page d'accueil version mobile*/
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -97,6 +88,7 @@ h2{
     font-weight: 300;
     margin: 24px 0;
 }
+/*bouton expolore restaurant*/
 .explore-restaurant button{
 background-image: linear-gradient(#FF79DA,#9356DC);
 cursor:pointer;
@@ -108,6 +100,7 @@ border: none;
 padding: 16px 24px;
 margin-bottom: 22px;
 }
+/*fonctionnemnt du site avec les étapes de commande*/
 .fonctionnement{
     padding: 32px 16px;
 }
@@ -126,7 +119,7 @@ margin-bottom: 22px;
 }
 .step{
     display:flex;
-    padding: 26px;
+    padding: 25px 0px 25px 20px;
     gap: 5%;
     border-radius: 20px;
     background-color: #f6f6f6;
@@ -150,14 +143,17 @@ margin-bottom: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
+  left: -2rem;
 }
 .step i{
     margin-right: 8px;
     color: grey;
+    margin-left: -10px;
 }
 .step:hover i{
     color: #9356dc;
 }
+/*la liste des restaurants*/
 #restaurants{
     background-color: #f6f6f6;
     padding: 32px 16px;
@@ -175,6 +171,7 @@ margin-bottom: 22px;
     text-decoration: none;
     color: inherit;
 }
+/*l'image de chaque card des 4 restaurants*/
 .restaurant-image{
     height: 200px;
     width: 100%;
@@ -183,6 +180,7 @@ margin-bottom: 22px;
     box-shadow: none;
     object-fit: cover;
 }
+/*le badge NOUVEAU*/
 .new{
     background-color: #99e2d0;
     color: #1b6150;
@@ -196,8 +194,14 @@ margin-bottom: 22px;
     padding: 16px;
     position: relative;
     display: flex;
-    flex-direction: column;
+
     gap: 8px;
+    justify-content: space-between;
+
+}
+.restaurant-text{
+    display: flex;
+    flex-direction: column;
 }
 h3{
     margin: 0 0 4px;
@@ -205,6 +209,7 @@ h3{
     font-size: large;
     font-family:'Roboto', sans-serif;
 }
+/*le footer est le meme pour la page d'accueil et la page restaurant*/
 .footer{
     background-color: #353535; 
 }
@@ -235,21 +240,7 @@ color: #fff;
 width:20px ;
 margin-right: 8px;
 }
-.menu-list{
-    background-color: lightgrey;
-}
-.menu-item{
-    background-color: #fff;
-    padding: 16px;
-    display: flex;
-    border-radius: 12px;
-    margin: 16px 0;
-    box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
-    overflow: hidden;
-    cursor: pointer;
-    max-width: 100%;
-   justify-content: space-between;
-}/*Début css page restaurant*/
+/*Début css page restaurant*/
 .restau-header{
     width: 100%;
     padding: 20px;
@@ -257,6 +248,7 @@ margin-right: 8px;
     text-align: center;
     position: fixed;
 }
+/*l'image du restaurant*/
 .menu-img{
     max-width: 100%;
 }
@@ -264,11 +256,12 @@ margin-right: 8px;
     font-family:"Shrikhand",cursive, sans-serif;
     position: relative;
 }
+/*l'icone HEART*/
 .menu-heart{
     height: 2rem;
     width: 2rem;
     background-color: initial;
-    border: 0 solid transparent;
+    border:none;
     padding: 0;
     display: flex;
     align-items: center;
@@ -284,6 +277,8 @@ margin-right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    font-size: x-large;
 }
 .menu-title{
     text-transform: uppercase;
@@ -292,6 +287,7 @@ margin-right: 8px;
     font-weight: 400;
     padding-top: 20px;
 }
+/*la ligne verte sous le litre entrées, plats et desserts*/
 .menu-title:after{
     content: "";
     width: 3rem;
@@ -307,6 +303,21 @@ margin-right: 8px;
     align-items: center;
     justify-content: space-between;
 }
+.menu-list{
+    background-color: lightgrey;
+}
+.menu-item{
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+   justify-content: space-between;
+}
 .menu-part{
     max-width: 100%;
     overflow: hidden;
@@ -317,7 +328,7 @@ h4{
  font-family:roboto ;
  font-weight: bold;
 }
-
+/*chacun des choix proposés pour les entrées, plats et desserts */
 .choice{
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -344,6 +355,7 @@ h4{
     background-color: #f6f6f6;
     position: relative;
 }
+/*bouton COMMANDER*/
 .command{
     display: flex;
     justify-content: center;
@@ -362,6 +374,7 @@ h4{
     box-shadow: 4px 4px 10px rgb(0 0 0 / 25%);
     cursor: pointer;
 }
+/*tous les prix du menu*/
 .choice-price{
     font-weight: 700;
     display: flex;
