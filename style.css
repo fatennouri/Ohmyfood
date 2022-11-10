@@ -180,7 +180,7 @@ margin-bottom: 22px;
     box-shadow: none;
     object-fit: cover;
 }
-/*le badge NOUVEAU*/
+/*l'étiquette NOUVEAU*/
 .new{
     background-color: #99e2d0;
     color: #1b6150;
@@ -257,21 +257,18 @@ margin-right: 8px;
     position: relative;
 }
 /*l'icone HEART*/
-.menu-heart{
+.btn-heart{
     height: 2rem;
     width: 2rem;
-    background-color: initial;
+    background-color:#f6f6f6;
     border:none;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: relative;
 }
-.fa-heart{
-    height: 8px;
-    width: 8px;
+.btn-heart .fa-heart{
     transition-duration: .25s;
     background-color: #f6f6f6;
     display: flex;
@@ -279,6 +276,29 @@ margin-right: 8px;
     justify-content: center;
     text-decoration: none;
     font-size: x-large;
+}
+/*les boutons avec icones HEART page d'accueil*/
+.menu-heart{
+    height: 2rem;
+    width: 2rem;
+    background-color:white;
+    border:none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.fa-heart{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+.fa-heart:hover{
+   
+   background-image: linear-gradient(violet, pink);
 }
 .menu-title{
     text-transform: uppercase;
