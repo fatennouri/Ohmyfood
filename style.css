@@ -56,22 +56,26 @@ h1{
     text-align: center;
     font-size: xx-large;
 }
-.city{
-    background-color: #f3f3f3;
+form{
+    background-color:#eaeaea;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 16px;
     position: relative;
 }
-.city-name{
+input{
+    border: none;
+    background-color:#eaeaea;
     font-size: medium;
     font-weight: 700;
     align-self: center;
+    justify-content: center;
 }
 .fa-location-dot{
     margin-right: 8px;
     font-size:large;
+    padding-left: 60px;
 }
 .explore-restaurant{
   text-align: center;
@@ -146,9 +150,9 @@ margin-bottom: 22px;
   left: -2rem;
 }
 .step i{
-    margin-right: 8px;
+    padding-right: 8px;
     color: grey;
-    margin-left: -10px;
+    margin-left: -12px;
 }
 .step:hover i{
     color: #9356dc;
@@ -240,6 +244,54 @@ color: #fff;
 width:20px ;
 margin-right: 8px;
 }
+/*version tablette pour page d'accueil*/
+@media screen and (min-width:768px)
+{
+    .steps {
+        gap: 5%;
+        flex-direction: row;
+        margin-top: 25px;
+}
+.step{
+    width: 100%;
+}
+.list-of-cards{
+    gap: 25px;
+    flex-direction: row;
+    margin-top: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.restaurant-card {
+    background-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    text-decoration: none;
+    width: 45%;
+} 
+.title{
+    padding: 0;
+}   
+h2{
+    color: #9356DC;
+}
+}
+/*version desktop pour page d'accueil*/
+@media screen and (min-width:992px)
+{
+    .step{
+        width: 100%;
+    }
+    .steps {
+        gap: 5%;
+        flex-direction: row;
+        margin-top: 25px;
+}
+.footer-part{
+    width: 100%;
+    align-items: center;
+}
+}
 /*Début css page restaurant*/
 .restau-header{
     width: 100%;
@@ -289,16 +341,19 @@ margin-right: 8px;
     justify-content: center;
     cursor: pointer;
 }
+
 .fa-heart{
-    background-color: white;
+
+ border-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: x-large;
+
 }
-.fa-heart:hover{
-   
-   background-image: linear-gradient(violet, pink);
+.fa-heart:active{
+   color: green;
+   transition: color .8s;
 }
 .menu-title{
     text-transform: uppercase;
