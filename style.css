@@ -302,11 +302,19 @@ h2{
 }
 /*l'image du restaurant*/
 .menu-img{
-    max-width: 100%;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
 }
 .main h2{
     font-family:"Shrikhand",cursive, sans-serif;
     position: relative;
+}
+.fa-arrow-left{
+    position: absolute;
+    left: 35px;
+    font-size: 30px;
+    color: black;
 }
 /*l'icone HEART*/
 .btn-heart{
@@ -456,4 +464,32 @@ h4{
     justify-content: flex-end;
     align-items: flex-end;
     padding-left: 0.5rem;
+}
+/*version tablette pour page d'accueil*/
+@media screen and (min-width:768px)
+{
+    .menu-img{
+        max-height: 500px;
+        width:100%;
+        object-fit: cover;
+    }
+    .menu-header{
+        padding: 1rem 2rem 0 1rem;
+        display: flex;
+        align-items: center;
+     justify-content: center;
+    }
+}
+
+/*version desktop pour page d'accueil*/
+@media screen and (min-width:992px)
+{
+    .menu{
+        margin-top: 0%;
+        border-radius: 0%;
+    }
+.restaurant-menu{
+    display: grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr))
+}
 }
