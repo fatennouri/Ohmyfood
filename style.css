@@ -47,63 +47,40 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .loading{
-    position: fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    animation: lost 1s linear;
+    animation-delay: 2s;
+    animation-fill-mode: both;
     width: 100%;
-    background:whitesmoke;
-    inset: 0;
-    z-index: 1;
-    opacity: 0.9;
-    animation: lost 2s 2s forwards ;
- transform-origin: top;
+    height: 100vh;
+    position: fixed;
 }
+
 @keyframes lost{
-form{
-        transform: scale(1);
+from{
+       opacity: 1;
     }
 to{
-    transform: scale(0);
+    opacity: 0;
 }
 }
 .loading-item-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #9356DC;
+    width: 120px;
+    height: 120px;
+    animation: rotate 1s linear infinite;
+    position: absolute;
 }
-.loading-item-box>span{
-    width: 25px;
-  height: 25px;
-  display: block;
-  background: #fff;
-  border-radius: 50%;
-  position: relative;
-  margin: 0 5px;
-}
-.dot-1 {
-    animation: anim 1s linear 0s infinite;  
-  }
-  
-  .dot-2 {
-    animation: anim 1s linear 0.25s infinite;
-  }
-  .dot-3 {
-    animation: anim 1s linear 0.50s infinite;
-  }
-  @keyframes anim {
-    0% {
-      top: 0;
-    background: #99E2D0;
-    }
-    50% {
-      top: 15px;
-     background-color:#FF79DA;
+  @keyframes rotate {
+    0%{
+        rotate: (0deg);
     }
     100% {
-      top: 0;
-  background-color: #9356DC ;
+     rotate: (360deg);
     }
   }
 
@@ -461,11 +438,46 @@ svg:active{
     cursor: pointer;
     max-width: 100%;
    justify-content: space-between;
+z-index: 0;
+   position: relative;
 }
-.menu-part{
+.menu-item-content{
+    width: 100%;
+    transition: 0.8s ease-in-out;
+}
+.menu-item-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-part1{
     max-width: 100%;
-    overflow: hidden;
     padding: 0 1rem;
+    animation: fadein 1s linear;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+.menu-part2{
+    max-width: 100%;
+    padding: 0 1rem;
+    animation: fadein 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+.menu-part3{
+    max-width: 100%;
+    padding: 0 1rem;
+    animation: fadein 1s linear;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 h4{
  font-size: medium;
@@ -478,13 +490,13 @@ h4{
     text-overflow: ellipsis;
     overflow: hidden;
     margin: 0;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 .choice-info{
-    margin: 0;
+    width: 100%;
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .choice-price{
     font-weight: 700;
@@ -500,33 +512,39 @@ h4{
     position: relative;
 }
 .confirmation{
-
-        flex: 0%;
-        color: #f6f6f6;
-        background-color: #99e2d0;
-        font-size: xx-large;
-        text-align: center;
-        height: 2.1em;
-        line-height: 2.1em;
-        white-space: nowrap;
-        border-top-right-radius: 20px 20px;
-        border-bottom-right-radius: 20px 20px;
-        transform: translateX(100px);
-        cursor: pointer;
-        transition: all 700ms;
-}
-
-.confirmation-icon{
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
+    position: absolute;
+    text-align: center;
+    right: -100px;
+    top: 0;
+    width: 100px;
+    height: 95px;
+    background-color: #99E2D0;
+    transition: 1s;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 100px;
-    transform: rotate(180deg);
-    transition-duration: .5s;
+    transition: 0.7s ease-in-out;
 }
+.confirmation i{
+    color: #fff;
+    font-size: 1.5em;
+}
+.menu-item:hover{
+    cursor: pointer;
+}
+.menu-item-content:hover{
+    width: calc(100% - 100px);
+    transition: all 0.7s ease-in-out 0s;
+}
+.menu-item:hover .confirmation{
+    right: 0px;
+    z-index: 2;
+    transition: all 0.7s ease-in-out 0s;
+}
+.menu-item:hover .confirmation i{
+    animation: 0.4s linear 0.3s 1 normal none running rotate;
+}
+
 /*bouton COMMANDER*/
 .command{
     display: flex;
