@@ -57,14 +57,13 @@ body{
     height: 100vh;
     position: fixed;
 }
-
 @keyframes lost{
-from{
-       opacity: 1;
+    from{
+           opacity: 1;
+        }
+    to{
+        opacity: 0;
     }
-to{
-    opacity: 0;
-}
 }
 .loading-item-box{
     border: 10px solid #f3f3f3;
@@ -171,9 +170,12 @@ margin-bottom: 22px;
     margin: 16px 0px 16px 12px;
     align-items: baseline;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 15%);
+    cursor: pointer;
 }
 .step:hover{
-    background-color:#E6E6FA;
+    cursor: pointer;
+background-color: plum;
+
 }
 .step-number{
   font-size: 15px;
@@ -195,7 +197,7 @@ margin-bottom: 22px;
     color: grey;
     margin-left: -12px;
 }
-.step:hover i{
+.step:hover .step i{
     color: #9356dc;
 }
 /*la liste des restaurants*/
@@ -380,27 +382,45 @@ h2{
 }
 /*icon heart page d'accueil*/
 .fa-heart{
-    font-size: 1rem;
+    font-size: 1.5rem;
 }  
 .fa-heart:hover{
-     animation: heart 0.5s;
-      font-weight: 900;
+     animation: heart 1s;
+      font-weight: 600;
       background:-webkit-linear-gradient(13deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 66%);
       color: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-     cursor: pointer; 
+     cursor: pointer;
     }
 @keyframes heart{
-0%{
-    opacity: 0;
-}
-50%{
-    opacity: 0.5;
-}
-100%{
-    opacity: 1;
-}
+    0% {
+        background:-webkit-linear-gradient(13deg, rgba(255, 121, 217, 0) 0%, rgba(187, 98, 219, 0) 66%);
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+  
+      50%{
+        background:-webkit-linear-gradient(13deg, rgba(255, 121, 217, 0.582) 0%, rgba(186,98,219,0.582) 66%);
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      80%{
+        background:-webkit-linear-gradient(13deg, rgba(255, 121, 217, 0.918) 0%, rgba(187, 98, 219, 0.836) 66%);
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      100%{
+        background:-webkit-linear-gradient(13deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 66%);
+        font-weight: 900;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 }
 /*les boutons avec icones HEART page d'accueil*/
 .menu-heart{
@@ -415,19 +435,6 @@ h2{
     cursor: pointer;
 }
 
-svg{
- border-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: x-large;
-opacity: 1;
-}
-svg:active{
-   
-    stroke: black;
-    fill: #9356dc;
-}
 .menu-title{
     text-transform: uppercase;
     position: relative;
@@ -480,25 +487,25 @@ z-index: 0;
 .menu-part1{
     max-width: 100%;
     padding: 0 1rem;
-    animation: fadein 1s linear;
+    animation: appear 1s linear;
     animation-delay: 0.5s;
     animation-fill-mode: both;
 }
 .menu-part2{
     max-width: 100%;
     padding: 0 1rem;
-    animation: fadein 1s linear;
+    animation: appear 1s linear;
     animation-delay: 1s;
     animation-fill-mode: both;
 }
 .menu-part3{
     max-width: 100%;
     padding: 0 1rem;
-    animation: fadein 1s linear;
+    animation: appear 1s linear;
     animation-delay: 1.5s;
     animation-fill-mode: both;
 }
-@keyframes fadein{
+@keyframes appear{
     0%{
         opacity: 0;
     }
