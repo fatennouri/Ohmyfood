@@ -70,6 +70,9 @@ to{
     border: 10px solid #f3f3f3;
     border-radius: 50%;
     border-top: 10px solid #9356DC;
+    border-bottom: 10px solid #FF79DA ;
+    border-left: 10px solid #99E2D0;
+    border-right: 10px solid #99E2D0;
     width: 120px;
     height: 120px;
     animation: rotate 1s linear infinite;
@@ -77,10 +80,10 @@ to{
 }
   @keyframes rotate {
     0%{
-        rotate: (0deg);
+        transform: rotate(0deg);
     }
     100% {
-     rotate: (360deg);
+     transform: rotate(360deg);
     }
   }
 
@@ -354,7 +357,7 @@ h2{
     font-size: 30px;
     color: black;
 }
-/*l'icone HEART*/
+/*l'icone HEART page menu */
 .btn-heart{
     height: 2rem;
     width: 2rem;
@@ -374,6 +377,30 @@ h2{
     justify-content: center;
     text-decoration: none;
     font-size: x-large;
+}
+/*icon heart page d'accueil*/
+.fa-heart{
+    font-size: 1rem;
+}  
+.fa-heart:hover{
+     animation: heart 0.5s;
+      font-weight: 900;
+      background:-webkit-linear-gradient(13deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 66%);
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+     cursor: pointer; 
+    }
+@keyframes heart{
+0%{
+    opacity: 0;
+}
+50%{
+    opacity: 0.5;
+}
+100%{
+    opacity: 1;
+}
 }
 /*les boutons avec icones HEART page d'accueil*/
 .menu-heart{
