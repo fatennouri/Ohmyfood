@@ -66,6 +66,7 @@ body{
         }
     to {
        opacity: 0;
+       z-index: -1;
     }
 }
 .loading-item-box{
@@ -591,9 +592,18 @@ h4{
  opacity: 1;
 }
 .menu-item:hover .confirmation i{
-        animation: rotate 0.4s linear;
+        animation: rotate 1s;
         animation-delay:0.3S;
       }
+  
+      @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100% {
+         transform: rotate(360deg);
+        }
+    }
 /*bouton COMMANDER*/
 .command{
     display: flex;
