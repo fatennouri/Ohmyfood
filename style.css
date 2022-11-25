@@ -61,11 +61,11 @@ body{
     background-color: #ffffffff;
 }
 @keyframes lost{
-    from{
-           scale: 1;
+    from {
+           opacity: 1;
         }
-    to{
-       scale: 0;
+    to {
+       opacity: 0;
     }
 }
 .loading-item-box{
@@ -79,8 +79,9 @@ body{
     height: 120px;
     animation: rotate 1s linear infinite;
     position: absolute;
-    top: 35%;
-    right: 46%;
+    top: 35%vh;
+    right: 46%vh;
+ 
 }
   @keyframes rotate {
     0%{
@@ -178,13 +179,14 @@ box-shadow: 2px 1px 25px 15px rgba(0,0,0,0.12);
     padding: 25px 0px 25px 20px;
     gap: 5%;
     border-radius: 20px;
+    cursor: pointer;
     background-color: #f6f6f6;
     margin: 16px 0px 16px 12px;
     align-items: baseline;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 15%);
 }
 .step:hover{
-background-color: plum;
+background-color: #f5edff;
 
 }
 .step-number{
@@ -207,7 +209,7 @@ background-color: plum;
     color: grey;
     margin-left: -12px;
 }
-.step:hover .step i{
+.step:hover i{
     color: #9356dc;
 }
 /*la liste des restaurants*/
@@ -481,9 +483,9 @@ h2{
     overflow: hidden;
     cursor: pointer;
     max-width: 100%;
+    position: relative;
+    z-index: 0;
    justify-content: space-between;
-
-
 }
 .menu-item-content{
     width: 100%;
@@ -493,6 +495,8 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    width: 100%;
 }
 .menu-part1{
     max-width: 100%;
@@ -555,15 +559,14 @@ h4{
     background-color: #f6f6f6;
     position: relative;
 }
-
 .confirmation{
     position: absolute;
     text-align: center;
-    right: -100px;
-    top: 0;
-    width: 100px;
-    height: 95px;
+    right: -120px;
+    width: 90px;
+    height: 100PX;
     background-color: #99E2D0;
+    opacity: 0;
     transition: 1s;
     display: flex;
     align-items: center;
@@ -582,14 +585,15 @@ h4{
     transition: all 0.7s ease-in-out 0s;
 }
 .menu-item:hover .confirmation{
-    right: 0px;
-    z-index: 2;
-    transition: all 0.7s ease-in-out 0s;
+    transition: 0.7s ease-in-out;
+    z-index: 1;
+
+ opacity: 1;
 }
 .menu-item:hover .confirmation i{
-    animation: 0.4s linear 0.3s 1 normal none running rotate;
-}
-
+        animation: rotate 0.4s linear;
+        animation-delay:0.3S;
+      }
 /*bouton COMMANDER*/
 .command{
     display: flex;
@@ -636,7 +640,6 @@ h4{
      justify-content: center;
     }
 }
-
 /*version desktop pour page d'accueil*/
 @media screen and (min-width:992px)
 {
