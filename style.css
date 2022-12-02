@@ -70,9 +70,6 @@ body {
   width: 120px;
   height: 120px;
   animation: rotate 1s linear infinite;
-  position: absolute;
-  top: 35%vh;
-  right: 46%vh;
 }
 @keyframes rotate {
   0% {
