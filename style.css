@@ -24,18 +24,16 @@ output,ruby,section,summary,time,mark,audio,video {
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
   display: block;
 }
-body {
-  line-height: 1;
-}
-ol,
-ul {
+ol,ul {
   list-style: none;
 }
 /*css page d'accueil version mobile*/
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  line-height: 1;
 }
+/*LOADER*/
 .loading {
   position: fixed;
   inset: 0;
@@ -49,7 +47,6 @@ body {
   animation-fill-mode: forwards;
   width: 100%;
   height: 100%;
-  background-color: #ffffffff;
 }
 @keyframes lost {
   from {
@@ -79,6 +76,7 @@ body {
     transform: rotate(360deg);
   }
 }
+/*Header*/
 header {
   padding: 16px;
   position: relative;
@@ -89,6 +87,7 @@ h1 {
   text-align: center;
   font-size: xx-large;
 }
+/*Formulaire localisation*/
 form {
   background-color: #eaeaea;
   display: flex;
@@ -96,7 +95,7 @@ form {
   align-items: center;
   padding: 16px;
 }
-input {
+input{
   border: none;
   background-color: #eaeaea;
   font-size: medium;
@@ -109,6 +108,7 @@ input {
   font-size: large;
   padding-left: 60px;
 }
+/*1ER boutton principal explore restaurant*/
 .explore-restaurant {
   text-align: center;
   background-color: #fafafa;
@@ -122,11 +122,11 @@ h2 {
 .explore-restaurant p {
   font-size: medium;
   font-family: "roboto", "sans serif";
-  font-weight: 300;
+  font-weight: 400;
   margin: 24px 0;
   color: dimgrey;
 }
-/*bouton expolore restaurant*/
+/*bouton expolore restaurant +effet clic*/
 .explore-restaurant button {
   background-image: linear-gradient(#ff79da, #9356dc);
   cursor: pointer;
@@ -140,8 +140,8 @@ h2 {
   box-shadow: 2px 1px 25px 15px rgba(0, 0, 0, 0.12);
 }
 .explore-restaurant button:active{
-  box-shadow: 2px 1px 25px 15px rgba(0, 0, 0, 0.21);
-  opacity: 0.9;
+  box-shadow: 2px 1px 25px 15px rgba(0, 0, 0, 0.18);
+  filter: brightness(1.1);
 }
 /*fonctionnemnt du site avec les étapes de commande*/
 .fonctionnement {
@@ -197,10 +197,13 @@ h2 {
 .step:active i {
   color: #9356dc;
 }
+.step p{
+  font-weight: 500;
+}
 /*la liste des restaurants*/
 #restaurants {
   background-color: #f6f6f6;
-  padding: 32px 16px;
+  padding: 42px 16px;
 }
 .list-of-cards {
   display: flex;
@@ -208,6 +211,7 @@ h2 {
   gap: 18px;
   margin-top: 20px;
 }
+/*la carte du Restaurant*/
 .restaurant-card {
   background-color: #fff;
   border-radius: 16px;
@@ -234,6 +238,7 @@ h2 {
   top: 16px;
   right: 12px;
 }
+/*La description sous l'image du restaurant*/
 .restaurant-info {
   padding: 16px;
   position: relative;
@@ -266,8 +271,10 @@ h3 {
 /*icon heart page d'accueil*/
 .fa-heart {
     font-size: 1.5rem;
+    width: 100%;
   }
-  .fa-heart:hover, fa-heart:active{
+  /*effet clic ou survol sur l'icone heart*/
+  .fa-heart:hover, .fa-heart:active{
     animation: heart 1s;
     font-weight: 600;
     background: -webkit-linear-gradient(
@@ -290,7 +297,6 @@ h3 {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-  
     50% {
       background: -webkit-linear-gradient(
         13deg,
@@ -301,7 +307,6 @@ h3 {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-  
     80% {
       background: -webkit-linear-gradient(
         13deg,
@@ -557,7 +562,6 @@ h4 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin: 0;
   padding-bottom: 10px;
 }
 .choice-info {
@@ -608,14 +612,12 @@ h4 {
 .menu-item:hover .confirmation {
   transition: 0.7s ease-in-out;
   z-index: 1;
-
   opacity: 1;
 }
 .menu-item:hover .confirmation i {
   animation: rotate 1s;
   animation-delay: 0.3s;
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -640,12 +642,13 @@ h4 {
   background-color: #686868;
   background-image: linear-gradient(#ff79da, #9356dc);
   transition-duration: 0.25s;
-  box-shadow: 4px 4px 10px rgb(0 0 0 / 25%);
+  box-shadow: 2px 1px 25px 15px rgb(0 0 0 / 12%);
   cursor: pointer;
+  filter: brightness(1);
 }
 .command-btn:active {
-  box-shadow: 4px 4px 10px rgb(0 0 0 / 50%);
-  opacity: 0.9;
+  box-shadow:2px 1px 25px 15px rgb(0 0 0 / 18%) ;
+  filter: brightness(1.1);
 }
 /*tous les prix du menu*/
 .choice-price {
@@ -684,7 +687,7 @@ h4 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .command-btn:hover{
-    box-shadow: 4px 4px 10px rgb(0 0 0 / 50%);
-    opacity: 0.9;
+    box-shadow:2px 1px 25px 15px rgb(0 0 0 / 18%) ;
+    filter: brightness(1.1);
   }
 }
